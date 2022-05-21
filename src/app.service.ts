@@ -7,6 +7,6 @@ export class AppService {
   getHello(): string {
     const api_key = process.env.API_KEY || this.configService.get<string>("API_KEY")
     console.log("api key : ", api_key)
-    return 'Hello World!!!!!!!! '.concat(api_key[0],api_key[1],api_key[2]);
+    return 'Hello World! '.concat(api_key[0],api_key[1],api_key[2]);
   }
 }

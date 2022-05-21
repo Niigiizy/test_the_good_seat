@@ -2,9 +2,7 @@ import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { AxiosResponse } from 'axios';
-import { firstValueFrom, map, Observable } from 'rxjs';
-import { CreateUserDTO } from './dto/create-user.dto';
-import { LoginDTO } from './dto/login.dto';
+import { map, Observable } from 'rxjs';
 
 @Injectable()
 export class AuthService {
