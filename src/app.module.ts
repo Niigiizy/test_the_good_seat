@@ -2,20 +2,19 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AuthController } from './auth/auth.controller';
 import { AuthModule } from './auth/auth.module';
-import { CourseSearchModule } from './course-search/course-search.module';
+import { RideModule } from './ride/ride.module';
 
 @Module({
   imports: [
     AuthModule, 
-    CourseSearchModule, 
+    RideModule, 
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: ".auth.env"
     })
   ],
-  controllers: [AppController, AuthController],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
